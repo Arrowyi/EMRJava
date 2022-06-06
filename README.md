@@ -266,3 +266,7 @@ indi.arrowyi.emr.EmrTest
 testBeTrue  53
 ```
 with what , we will locate the expectation miss immediately.
+
+## How to use
+pleae ref to the test class , it is so simple. 
+I wish it could make your lift easier.
