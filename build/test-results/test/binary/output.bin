@@ -1,0 +1,12 @@
+should not be null
+*Expectation miss record : at EmrTest.java
+indi.arrowyi.emr.EmrTest  
+testBeTrue  53 
+should be true
+*Expectation miss record : at EmrTest.java
+indi.arrowyi.emr.EmrTest  
+testBeTrue  59 
+should be false
+*Expectation miss record : at EmrTest.java
+indi.arrowyi.emr.EmrTest  
+testBeTrue  66 
