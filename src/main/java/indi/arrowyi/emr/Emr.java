@@ -16,13 +16,28 @@
 
 package indi.arrowyi.emr;
 
+/**
+ * The type Emr.
+ */
 public class Emr {
     private static LogInterface log = null;
 
+    /**
+     * Init log interface.
+     *
+     * @param logInterface the log interface
+     */
     public static void initLogInterface(LogInterface logInterface) {
         log = logInterface;
     }
 
+
+    /**
+     * check if the parameter is null.
+     *
+     * @param o the object you want to check
+     * @return the boolean , if o is not null return true , else false with outputting the log
+     */
     public static boolean notNull(Object o) {
 
         if (o == null) {
@@ -33,6 +48,14 @@ public class Emr {
         return true;
     }
 
+
+    /**
+     * check if the parameter is null
+     *
+     * @param msg the msg, is expectation missed, the msg will be attached to the log
+     * @param o   the object you want to check
+     * @return the boolean,if o is not null return true , else false with outputting the log
+     */
     public static boolean notNull(String msg, Object o) {
         if (o == null) {
             getRecordString(msg + " should not be null");
@@ -42,6 +65,13 @@ public class Emr {
         return true;
     }
 
+
+    /**
+     * check the parameter is true
+     *
+     * @param check value to be check
+     * @return the boolean, true if the value is true, or false with outputting the log
+     */
     public static boolean beTrue(boolean check) {
 
         if (!check) {
@@ -53,6 +83,13 @@ public class Emr {
     }
 
 
+    /**
+     * check the parameter is true
+     *
+     * @param msg the msg, is expectation missed, the msg will be attached to the log
+     * @param check value to be check
+     * @return the boolean, true if the value is true, or false with outputting the log
+     */
     public static boolean beTrue(String msg, boolean check) {
         if (!check) {
             getRecordString(msg + " should be true");
@@ -62,6 +99,13 @@ public class Emr {
         return true;
     }
 
+
+    /**
+     * check the parameter is false
+     *
+     * @param check value to be check
+     * @return the boolean, true if the value is false, or false with outputting the log
+     */
     public static boolean beFalse(boolean check) {
 
         if (check) {
@@ -73,6 +117,13 @@ public class Emr {
     }
 
 
+    /**
+     * check the parameter is false
+     *
+     * @param msg the msg, is expectation missed, the msg will be attached to the log
+     * @param check value to be check
+     * @return the boolean, true if the value is false, or false with outputting the log
+     */
     public static boolean beFalse(String msg, boolean check) {
         if (check) {
             getRecordString(msg + " should be false");
@@ -82,6 +133,13 @@ public class Emr {
         return true;
     }
 
+
+    /**
+     * check the value is null
+     *
+     * @param check the value to be check
+     * @return the boolean, true if the value is null, or false with outputting the log
+     */
     public static boolean beNull(Object check) {
 
         if (check != null) {
@@ -93,6 +151,13 @@ public class Emr {
     }
 
 
+    /**
+     * check the value is null
+     *
+     * @param msg the msg, is expectation missed, the msg will be attached to the log
+     * @param check the value to be check
+     * @return the boolean, true if the value is null, or false with outputting the log
+     */
     public static boolean beNull(String msg, Object check) {
         if (check != null) {
             getRecordString(msg + " should be null");

@@ -268,5 +268,88 @@ testBeTrue  53
 with what , we will locate the expectation miss immediately.
 
 ## How to use
-pleae ref to the test class , it is so simple. 
+### reference the lib
+Gradle
+
+Add it in your root build.gradle at the end of repositories:
+```kotlin
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Add the dependency
+```kotlin
+dependencies {
+	        implementation 'com.github.Arrowyi:EMRJava:main-SNAPSHOT'
+	}
+```
+
+Maven
+
+Add the JitPack repository to your build file
+```kotlin
+<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+```
+Add the dependency
+```kotlin
+<dependency>
+	    <groupId>com.github.Arrowyi</groupId>
+	    <artifactId>EMRJava</artifactId>
+	    <version>main-SNAPSHOT</version>
+	</dependency>
+```
+### The API
+
+```java
+
+/**
+     * Init log interface.
+     *
+     * @param logInterface the log interface
+     */
+    public static void initLogInterface(LogInterface logInterface)
+
+
+/**
+ * check if the parameter is null.
+ *
+ * @param o the object you want to check
+ * @return the boolean , if o is not null return true , else false with outputting the log
+ */
+public static boolean notNull(Object o)
+
+/**
+ * check the parameter is true
+ *
+ * @param check value to be check
+ * @return the boolean, true if the value is true, or false with outputting the log
+ */
+public static boolean beTrue(boolean check)
+
+/**
+ * check the parameter is false
+ *
+ * @param check value to be check
+ * @return the boolean, true if the value is false, or false with outputting the log
+ */
+public static boolean beFalse(boolean check)
+
+/**
+ * check the value is null
+ *
+ * @param check the value to be check
+ * @return the boolean, true if the value is null, or false with outputting the log
+ */
+public static boolean beNull(Object check)
+```
+
+More usage you could ref to the test class , it is so simple. 
 I wish it could make your lift easier.
